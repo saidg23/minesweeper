@@ -6,16 +6,19 @@ $columns = $_GET["columns"];
 
 $longSide = max($rows, $columns);
 
-$gridSize = "70vmin";
-if($rows > $columns)
-{
-  $gridSize = "75vmin";
-}
+$gridSize = "75vmin";
 ?>
 
 body
 {
+  color: white;
+  background-color: #222222;
   margin: 0;
+}
+
+h1
+{
+  margin-top: 5vh;
 }
 
 #main-div
@@ -24,7 +27,7 @@ body
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -33,10 +36,102 @@ body
   display: grid;
   grid-template-rows: repeat(<?php echo $rows ?>, calc(<?php echo $gridSize." / ".$longSide ?>));
   grid-template-columns: repeat(<?php echo $columns ?>, calc(<?php echo $gridSize." / ".$longSide ?>));
-  grid-gap: 0.4vmin;
+  grid-gap: 0.5vmin;
+}
+
+#timer
+{
+  font-size: 5vmin;
 }
 
 .cell
 {
-  background-color: orange;
+  /* background-color: orange; */
+  font-size: calc(<?php echo $gridSize." / ".$longSide?>);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden-tile
+{
+  background-color: dodgerblue;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 0.8vmin;
+
+  cursor: pointer;
+}
+
+.bomb
+{
+  color: firebrick;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.splash
+{
+  font-size: 10vmin;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+#splash-text
+{
+  background-color: #000000dd;
+  padding: 2vh;
+}
+
+#options
+{
+  font-size: 2.5vmin;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vmin;
+  width: 38vmin;
+}
+
+.button
+{
+  color: dodgerblue;
+  background-color: #080808;
+
+  font-weight: bold;
+
+  padding: 0.5em;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.button:hover
+{
+  color: white;
+}
+
+#endgame-options
+{
+  font-size: 3vmin;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 50vmin;
+
+  padding: 2vmin;
 }
