@@ -2,7 +2,7 @@ body
 {
   color: white;
   background-color: #222222;
-  font-size: 3vmin;
+  font-size: 4vmin;
   margin: 0;
 }
 
@@ -20,7 +20,48 @@ a
   height: 100vh;
 
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+#difficulty
+{
+  margin-bottom: 0.4em;
+}
+
+#scoreboard
+{
+  background-color: dodgerblue;
+  width: 60vmin;
+
+  font-size: 0.8em;
+
+  padding: 0.2em;
+  border-radius: 0.4em;
+  margin-bottom: 0.4em;
+  border-spacing: 0.2em;
+
+  table-layout: fixed;
+}
+
+#scoreboard th
+{
+  text-align: left;
+}
+
+#scoreboard td
+{
+  color: black;
+  background-color: white;
+
+  padding: 0.2em;
+  border-radius: 0.3em;
+
+  overflow: hidden;
+}
+
+.time-cell
+{
+  text-align: center;
 }
 
 .button
@@ -28,7 +69,7 @@ a
   color: white;
   background-color: dodgerblue;
 
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bold;
 
   display: inline-block;
@@ -47,5 +88,14 @@ a
 
 .inactive-button
 {
+  color: white;
+  background-color: #666666;
+  font-size: 0.7em;
+  font-weight: bold;
 
+  display: inline-block;
+
+  padding: 0.5em;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em white;
 }
