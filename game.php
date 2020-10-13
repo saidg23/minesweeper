@@ -24,6 +24,7 @@
         let rows = "<?php echo $rows?>";
         let columns = "<?php echo $columns?>";
         let difficulty = "<?php echo $difficulty?>";
+        let name = "<?php echo $_GET["name"]?>";
       </script>
     <script src="script.js" defer></script>
   </head>
@@ -42,14 +43,14 @@
         ?>
       </div>
       <div id="options">
-        <span class="button" onclick="window.location.href = 'http://localhost'">Main Menu</span>
+        <a class="button" href="http://localhost">Main Menu</a>
         <span class="button" onclick="location.reload()">Restart</span>
       </div>
     </div>
     <div id="end-screen" class="hidden">
       <div id="splash-text">YOU WIN!</div>
       <div id="endgame-options">
-        <span class="button" onclick="submitTime()">Submit Time</span>
+        <span id="time-submit-button" class="hidden" onclick="submitTime()">Submit Time</span>
         <span class="button" onclick="location.reload()">Try Again</span>
       </div>
     </div>

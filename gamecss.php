@@ -21,6 +21,11 @@ h1
   margin-top: 5vh;
 }
 
+a
+{
+  text-decoration: none;
+}
+
 #main-div
 {
   width: 100vw;
@@ -109,19 +114,21 @@ h1
 
 .button
 {
-  color: dodgerblue;
-  background-color: #080808;
+  color: white;
+  background-color: dodgerblue;
 
   font-weight: bold;
 
   padding: 0.5em;
   border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em white;
+
   cursor: pointer;
 }
 
 .button:hover
 {
-  color: white;
+  background-color: deepskyblue;
 }
 
 #endgame-options

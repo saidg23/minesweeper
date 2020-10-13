@@ -1,1 +1,131 @@
+body
+{
+  color: white;
+  background-color: #222222;
+  font-size: 4vmin;
+  margin: 0;
+}
 
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=text]
+{
+  height: 1.5em;
+  font-size: 0.7em;
+  padding: 0.1em;
+  border: none;
+  border-radius: 0.4em;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+#main-div
+{
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#menu form
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5vmin;
+}
+
+.difficulty
+{
+  display: none;
+}
+
+.button
+{
+  color: white;
+  background-color: dodgerblue;
+
+  font-size: 1em;
+  font-weight: bold;
+
+  display: block;
+
+  padding: 0.5em;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em white;
+
+  cursor: pointer;
+}
+
+.button:hover
+{
+  background-color: deepskyblue;
+}
+
+.diff-label
+{
+  color: white;
+  background-color: dodgerblue;
+
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+
+  display: block;
+
+  position: relative;
+
+  padding: 0.5em;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em white;
+  margin-bottom: -2vmin;
+
+  cursor: pointer;
+}
+
+.diff-label:hover
+{
+  background-color: deepskyblue;
+}
+
+#easy:checked ~ .diff-label[for="easy"]
+{
+  color: white;
+  background-color: limegreen;
+}
+
+#medium:checked ~ .diff-label[for="medium"]
+{
+  color: white;
+  background-color: darkorange;
+}
+
+#hard:checked ~ .diff-label[for="hard"]
+{
+  color: white;
+  background-color: orangered;
+}
+
+@media (max-width: 800px)

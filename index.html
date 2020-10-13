@@ -3,17 +3,20 @@
   <head>
     <title>minesweeper</title>
     <meta charset="UTF8">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div id="main-div">
       <h1>Minesweeper</h1>
       <div id="menu">
         <form action="/game.php" method="get">
-          <input id="easy" type="radio" name="difficulty" value="easy"><label for="easy">Easy</label><br>
-          <input id="medium" type="radio" name="difficulty" value="medium"><label for="medium">Medium</label><br>
-          <input id="hard" type="radio" name="difficulty" value="hard"><label for="hard">Hard</label><br>
-          <button type="submit">Play</button>
+          <input type="text" name="name" minlength="2" maxlength="40" placeholder="Name" required><br>
+          <input id="easy" class="difficulty" type="radio" name="difficulty" value="easy" checked><label class="diff-label" for="easy">Easy</label><br>
+          <input id="medium" class="difficulty" type="radio" name="difficulty" value="medium"><label class="diff-label" for="medium">Medium</label><br>
+          <input id="hard" class="difficulty" type="radio" name="difficulty" value="hard"><label class="diff-label" for="hard">Hard</label><br>
+          <button class="button" type="submit">Play</button>
         </form>
+        <a id="scoreboard-button" class="button" href="scoreboard.php?difficulty=easy">View Scoreboard</a>
       </div>
     </div>
   </body>
