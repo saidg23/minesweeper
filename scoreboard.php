@@ -20,6 +20,7 @@
   <head>
     <title>minesweeper</title>
     <meta charset="UTF8">
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="scoreboard.css">
   </head>
   <body>

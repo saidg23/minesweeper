@@ -19,6 +19,7 @@
   <head>
     <title>minesweeper</title>
     <meta charset="UTF8">
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="gamecss.php?columns=<?php echo $columns?>&rows=<?php echo $rows ?>">
       <script>
         let rows = "<?php echo $rows?>";
