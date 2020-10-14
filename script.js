@@ -118,11 +118,11 @@ function initGame()
         bombs.push(false);
     }
 
-    let numberOfBombs = 10;
+    let numberOfBombs = 12;
     switch(difficulty)
     {
-        case "medium": numberOfBombs = 30; break;
-        case "hard": numberOfBombs = 50; break;
+        case "medium": numberOfBombs = 25; break;
+        case "hard": numberOfBombs = 40; break;
         default: break;
     }
 
