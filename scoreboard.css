@@ -11,6 +11,11 @@ a
   text-decoration: none;
 }
 
+h1
+{
+  font-size: 1.5em;
+}
+
 #main-div
 {
   display: flex;
@@ -31,7 +36,7 @@ a
 #scoreboard
 {
   background-color: dodgerblue;
-  width: 60vmin;
+  width: 75vmin;
 
   font-size: 0.8em;
 

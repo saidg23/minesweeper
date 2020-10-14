@@ -1,4 +1,3 @@
-
 function bombProximity(x, y)
 {
     if(bombs[x + columns * (y + 1)] && boundCheck(x, y + 1)) return true;
@@ -60,7 +59,8 @@ function revealTile(x, y)
     if(bombProximity(x, y))
     {
         revealed[index] = true;
-        tiles[index].innerHTML = bombCount(x, y);
+        let number = bombCount(x, y)
+        tiles[index].innerHTML = "<span class='number'>" + number + "</span>";
         return;
     }
 
@@ -164,7 +164,7 @@ function checkRequest()
         var status = http.status;
         if (status === 0 || (status >= 200 && status < 400))
         {
-            window.location.href = "http://localhost:80/scoreboard.php?difficulty=" + difficulty;
+            window.location.href = "http://minesweeper.saidgarcia.com/scoreboard.php?difficulty=" + difficulty + "&page=1";
         }
     }
 }
@@ -173,11 +173,10 @@ function submitTime()
 {
 
     http = new XMLHttpRequest();
-    http.open("POST", "http://localhost:80/submit.php");
+    http.open("POST", "http://minesweeper.saidgarcia.com/submit.php");
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     http.onreadystatechange = checkRequest;
     http.send("name=" + name + "&time=" + timer.getTime() + "&difficulty=" + difficulty);
-    // httpInterval = setInterval(getTable, 1000);
 }
 
 function getTable()
@@ -204,8 +203,3 @@ let timerInterval = null;
 let http = null;
 let httpInterval = null;
 initGame();
-
-// for(let i = 0; i < tiles.length; ++i)
-// {
-//     if(bombs[i]) tiles[i].innerHTML = "X";
-// }

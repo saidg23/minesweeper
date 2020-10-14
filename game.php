@@ -43,7 +43,7 @@
         ?>
       </div>
       <div id="options">
-        <a class="button" href="http://localhost">Main Menu</a>
+        <a class="button" href="index.html">Main Menu</a>
         <span class="button" onclick="location.reload()">Restart</span>
       </div>
     </div>

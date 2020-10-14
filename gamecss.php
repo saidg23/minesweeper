@@ -51,7 +51,6 @@ a
 
 .cell
 {
-  /* background-color: orange; */
   font-size: calc(<?php echo $gridSize." / ".$longSide?>);
 
   display: flex;
@@ -74,6 +73,11 @@ a
 .bomb
 {
   color: firebrick;
+}
+
+.number
+{
+  color: darkorange;
 }
 
 .hidden
