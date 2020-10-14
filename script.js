@@ -121,7 +121,7 @@ function initGame()
     let numberOfBombs = 12;
     switch(difficulty)
     {
-        case "medium": numberOfBombs = 25; break;
+        case "medium": numberOfBombs = 20; break;
         case "hard": numberOfBombs = 40; break;
         default: break;
     }
