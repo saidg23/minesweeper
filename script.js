@@ -173,7 +173,7 @@ function submitTime()
 {
 
     http = new XMLHttpRequest();
-    http.open("POST", "http://minesweeper.saidgarcia.com/submit.php");
+    http.open("POST", "https://minesweeper.saidgarcia.com/submit.php");
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     http.onreadystatechange = checkRequest;
     http.send("name=" + name + "&time=" + timer.getTime() + "&difficulty=" + difficulty);
